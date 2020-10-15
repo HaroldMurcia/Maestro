@@ -1,7 +1,7 @@
 ﻿maestro.py
 ==========
 
-This Python class supports Pololu's Maestro servo controller over USB serial. Great for use with the Raspberry Pi, but works with Windows too.
+This Python class supports Pololu's Maestro servo controller over USB serial. Great for use with the raspberry Pi, but works with Windows too.
 
 The class includes methods to control servos (position, speed, acceleration), read servo position, and start/stop Maestro scripts.  See Pololu's on-line documentation to learn about the full capabilities of this nifty micro-controller.
 
@@ -14,7 +14,7 @@ You'll need to have the 'pyserial' Python module installed to use maestro.py.
 If you have pip available, pyserial can be installed as follows:
 
     python -m pip install pyserial
-    
+
 or, for python3
 
     python3 -m pip install pyserial
@@ -53,7 +53,7 @@ For use on Windows, you'll need to provide the COM port assigned to the Maestro 
 
     import maestro
     m = maestro.Controller('COM3')
-    
+
 ## Permission issue
 
 If you find that Linux complains about permissions trying to access the ttyACM device, just add your user to the 'dialout' group by issuing the following:
@@ -68,4 +68,4 @@ The Maestro series of controllers can support much more than just servo control.
 
 Beyond servo and motor control, the Maestros can also be used for digital inputs, digital outputs and analog inputs.  The setTarget and getPosition methods support setting and reading values for these extended features.  You do, however, need to use the Maestro Control Center to change the mode of individual channels from "servo" to either "input" or "output".  Read the Maestro documentation on how to properly use these special modes and wire them properly.
 
-I've found that the many capabilities of the Maestro lends itself nicely to robotics.  If you're interested in some robotic applications check out [Basic PiBot](https://github.com/FRC4564/BasicPiBot).  Its a simple framework to get you started with making your own interactive and/or autonomous machines.  The maestro has proven to be rock solid in this applications. 
+I've found that the many capabilities of the Maestro lends itself nicely to robotics.  If you're interested in some robotic applications check out [Basic PiBot](https://github.com/FRC4564/BasicPiBot).  Its a simple framework to get you started with making your own interactive and/or autonomous machines.  The maestro has proven to be rock solid in this applications.
